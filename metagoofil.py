@@ -207,9 +207,10 @@ def doprocess(argv):
     #   print x
 
 if __name__ == "__main__":
-    try: 
+    try:
     	doprocess(sys.argv[1:])
     except KeyboardInterrupt:
         print "Process interrupted by user."
-    except:
+    except Exception as e:
+        print e
         sys.exit()
